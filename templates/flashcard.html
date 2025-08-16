@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flashcard</title>
+</head>
+<body>
+    <h2>Flashcard</h2>
+
+    <p><strong>{{ item.word }}</strong></p>
+
+    {% if show_answer %}
+        <p>Definition: {{ item.definition }}</p>
+        <p>Chinese: {{ item.translation }}</p>
+        <a href="/flashcard">Next Card</a>
+    {% else %}
+        <form method="POST">
+            <button type="submit">Show Answer</button>
+        </form>
+    {% endif %}
+</body>
+</html>

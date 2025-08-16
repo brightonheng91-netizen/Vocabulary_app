@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vocabulary List</title>
+</head>
+<body>
+    <h2>Your Vocabulary List</h2>
+    <ul>
+        {% for item in vocabulary %}
+            <li>
+                <strong>{{ item.word }}</strong> – {{ item.definition }} ({{ item.translation }})
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
